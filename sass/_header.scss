@@ -1,0 +1,31 @@
+/*	:: Site Header
+	========================================================================== */
+
+.site-header { content: ''; }
+
+.site-title {
+	img { 
+		display: block;
+		image-rendering: optimizeQuality; 
+	}
+	h1 { margin: 0; }
+	span { display: none; }
+	a { outline: none; }
+}
+
+.site-nav {
+	li {
+	
+	}
+	a {
+		
+		&:hover {
+		
+		}
+	}
+	li.current-page-ancestor > a,
+	li.current-menu-item > a,
+	li:hover > a {
+		
+	}
+}

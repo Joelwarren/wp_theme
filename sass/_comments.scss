@@ -1,0 +1,122 @@
+
+/*	:: Comments
+	========================================================================== */
+
+#respond {
+	margin-top: 30px;
+}
+
+.comments-title,
+.comment-reply-title {
+	font-size: 20px;
+	margin: 0;
+}
+.comments-title {
+	margin-bottom: 10px;
+}
+.comment-notes,
+.logged-in-as {
+	color: #555;
+	margin-bottom: 20px;
+}
+.form-allowed-tags {
+	color: #999999;
+	font-size: 12px;
+	code {
+		color: #999;
+		background: none;
+	}
+}
+
+.comment-awaiting-moderation {
+	display: block;
+	@extend .alert;
+	padding: 4px 8px;
+	margin: 0;
+	@extend .alert-warning;
+}
+
+#commentform {
+	label {
+		display: block;
+		margin: 0 0 4px;
+		padding: 0 4px;
+	}
+	
+	#author,
+	#email,
+	#url,
+	#comment {
+		@extend .form-control;
+	}
+	
+	.form-submit input {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+	
+	textarea {
+		height: 110px;
+		width: 100%;
+	}
+	
+	.comment-form-author {
+		float: left;
+		width: 49%;
+	}
+	
+	.comment-form-email {
+		float: right;
+		width: 49%;
+	}
+}
+
+.comment-list {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 40px;
+	ol {
+		list-style: none;
+		margin: 10px 0 0;
+		li.comment {
+			margin-bottom: 0;
+		}
+	}
+	li.comment {
+		background: #fff;
+		color: #555;
+		padding: 16px;
+		border: 1px solid #dce6e6;
+		border-radius: 3px;
+		position: relative;
+		padding-left: 56px;
+		margin-bottom: 20px;
+		.avatar {
+			position: absolute;
+			top: 5px;
+			left: -36px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+	.comment-author {
+		font-size: 1.17em;
+		margin: 0;
+	}
+	.comment-meta {
+		color: #7c838a;
+		font-size: 12px;
+		font-style: italic;
+		margin-bottom: 10px;
+		a {
+			color: #999;
+		}
+	}
+	.comment-awaiting-moderation + br {
+		display: none;
+	}
+	.reply {
+		font-size: 12px;
+		font-style: italic;
+	}
+}

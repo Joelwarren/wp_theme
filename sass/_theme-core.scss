@@ -1,0 +1,23 @@
+
+
+html { overflow-y: scroll; }
+
+a {
+	@include transition(all 0.2s); 
+	&:hover { 
+		text-decoration: none; 
+	}
+}
+
+.page-header {
+	border: none;
+	padding: 0;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.wpcf7-form-control {
+	@extend .form-control;
+}
