@@ -14,7 +14,7 @@ function _theme_customize_register($wp_customize) {
 	$wp_customize->remove_section('header_image');
 	$wp_customize->remove_section('background_image');
 	
-	$social_options = SOCIAL_NETWORKS;
+	$social_options = unserialize(SOCIAL_NETWORKS);
 
 	// Social Links
 	$wp_customize->add_section( 'social_section', array(

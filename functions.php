@@ -15,13 +15,12 @@
 define('POST_EXCERPT_LENGTH', 40); 
 
 // Define the social media icons for customiser & shortcode output
-define('SOCIAL_NETWORKS', 
-	array(
-		'facebook' => 'Facebook',
-		'twitter' => 'Twitter',
-		'linkedin' => 'Linkedin'
-	)
+$social_networks = array(
+	'facebook' => 'Facebook',
+	'twitter' => 'Twitter',
+	'linkedin' => 'Linkedin'
 );
+define('SOCIAL_NETWORKS', serialize($social_networks));
 
 /**
 * $content_width is a global variable used by WordPress for max image upload sizes

@@ -16,7 +16,7 @@ function _theme_social_links_shortcode( $atts ) {
 
 	$atts = shortcode_atts( $defaults, $atts, 'social_links' );
 	
-	$social_options = SOCIAL_NETWORKS;
+	$social_options = unserialize(SOCIAL_NETWORKS);
 	
 	$output = '<ul class="social-links">';
 	foreach( $social_options as $social => $name ) {
