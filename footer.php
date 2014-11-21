@@ -13,8 +13,7 @@
 	
 		<?php if ( is_active_sidebar('footer') ) { ?>
 			
-			<?php $count = _theme_get_widget_count('footer'); ?>
-			<footer itemtype="http://schema.org/WPFooter" itemscope="itemscope" role="contentinfo" class="site-footer widget-count-<?php echo $count; ?>">
+			<footer itemtype="http://schema.org/WPFooter" itemscope="itemscope" role="contentinfo" class="site-footer">
 				<div class="container">
 					<div class="row">
 						<?php dynamic_sidebar( 'footer' ); ?>
