@@ -23,6 +23,8 @@ get_header(); ?>
 						<li>a mistyped address</li>
 						<li>an out-of-date link</li>
 					</ul>
+					<p>Please check your URL or use the search form below.</p>
+					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
 

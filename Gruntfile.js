@@ -102,7 +102,6 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed',
 					compass: true,
-					sourcemap: 'none',
 					lineNumbers: true
 				},
 				files: {
@@ -128,7 +127,7 @@ module.exports = function(grunt) {
 	// register task
 	grunt.registerTask('default', [
 		'jshint',
-		'sass:dist',
+		'sass:dev',
 		'uglify:dist',
 		'watch'
 	]);

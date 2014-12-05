@@ -7,5 +7,7 @@
  */
 ?>
 
-	<div class="primary">
-		<main itemscope="itemscope" itemprop="mainContentOfPage" role="main" class="content">
+	<div class="container">
+		<div class="row">
+			<div class="primary">
+				<main itemscope="itemscope" itemprop="mainContentOfPage" role="main" class="content">

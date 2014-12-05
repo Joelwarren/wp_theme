@@ -86,13 +86,9 @@ require_once locate_template('/functions/shortcodes.php'); // Theme specific sho
 require_once locate_template('/functions/customizer.php'); // Setup customier options
 require_once locate_template('/functions/widgets.php');    // Setup widget areas
 
+require_once locate_template('/functions/woocommerce.php');
 
-if( current_theme_supports( 'woocommerce' ) )              // Woocommerce specific functionality (conditional)
-	require_once locate_template('/functions/woocommerce.php');
-
-
-if( current_theme_supports( 'bootstrap-navbar' ) )         // Load in the menu walker to support twitter bootstrap markup (conditional)
-	require_once locate_template('/functions/bootstrap-navbar.php');
+require_once locate_template('/functions/bootstrap-navbar.php');
 
 require_once locate_template('/functions/custom.php');     // Custom theme functionality
 

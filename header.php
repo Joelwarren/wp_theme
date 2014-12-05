@@ -27,45 +27,36 @@
 	<div class="site-container">
 	
 		<header itemtype="http://schema.org/WPHeader" itemscope="itemscope" role="banner" class="site-header">
-			<div class="container">
-				
-				<div class="site-title" class="navbar-brand">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" />
-						<span><?php bloginfo( 'name' ); ?></span>
+			<nav class="navbar navbar-inverse" role="navigation">
+			  <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a type="button" href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+						Menu
 					</a>
-				</div><!-- .site-title -->
-					
-				<?php if ( has_nav_menu( 'primary' ) ) { ?>
-					<?php if( current_theme_supports( 'bootstrap-navbar' ) ) { ?>
-						<nav id="site-nav" class="site-nav navbar navbar-default pull-right" role="navigation">
-							<a type="button" href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-								Menu
-							</a>
-							<div class="collapse navbar-collapse" id="navbar">
-								<?php 
-									wp_nav_menu( 
-										array( 
-											'theme_location' 	=> 'primary', 
-											'container'         => false,
-											'container_class'   => false,
-											'depth'             => 2,
-											'menu_class'        => 'nav navbar-nav',
-											'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-											'walker'            => new wp_bootstrap_navwalker()
-										) 
-									);
-								?>
-							</div>
-						</nav><!-- .site-nav -->
-					<?php } else { ?>
-						<nav id="site-nav" class="site-nav" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-						</nav><!-- #site-nav -->
-					<?php } ?>
-				<?php } ?>
-				
-			</div><!-- .container -->
+					<a class="navbar-brand" href="<?php echo site_url(); ?>">
+						<img alt="Spacemakers" src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar">
+					<?php 
+						wp_nav_menu( 
+							array( 
+								'theme_location' 	=> 'primary', 
+								'container'         => false,
+								'container_class'   => false,
+								'depth'             => 2,
+								'menu_class'        => 'nav navbar-nav navbar-right',
+								'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+								'walker'            => new wp_bootstrap_navwalker()
+							) 
+						);
+					?>
+				</div><!-- .navbar-collapse -->
+			  </div><!-- .container -->
+			</nav>
 		</header><!-- .site-header -->
 		
 		<div class="site-inner">

@@ -9,6 +9,8 @@
  */
 ?>
 
+				</div><!-- .row -->
+			</div><!-- .container -->
 		</div><!-- .site-inner -->
 	
 		<?php if ( is_active_sidebar('footer') ) { ?>
