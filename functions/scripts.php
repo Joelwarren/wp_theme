@@ -33,7 +33,7 @@ function _theme_scripts() {
 add_action( 'wp_enqueue_scripts', '_theme_scripts', 100 );
 
 
-if ( WP_LOCAL_SERVER || WP_DEV_SERVER ) {
+if ( WP_LOCAL_SERVER ) {
 	add_action( 'wp_enqueue_scripts', '_theme_dev_livereload' );
 	function _theme_dev_livereload(){
 		wp_enqueue_script( 'livereload', 'http://' . $_SERVER['SERVER_NAME'] . '/livereload.js', '', null, true );
