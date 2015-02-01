@@ -21,13 +21,19 @@
 @import "compass";
 
 // Default styling
-@import "theme-variables";
 @import "bootstrap";
-@import "wordpress";
-@import "comments";
 
 // Theme files
-@import "theme-core";
+@import "layout";
 @import "header";
 @import "footer";
-@import "content";
+
+// Components
+@import "components/comments";
+@import "components/content";
+@import "components/media";
+@import "components/widgets";
+
+// Plugins
+@import "plugins/magnific-popup";
+

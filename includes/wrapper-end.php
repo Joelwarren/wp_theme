@@ -7,5 +7,5 @@
  */
 ?>
 
-		</main><!-- .main -->
-	</div><!-- .primary -->
+		</main><!-- #main -->
+	</div><!-- #primary -->

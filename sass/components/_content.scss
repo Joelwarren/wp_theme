@@ -1,0 +1,95 @@
+/*	:: General Page styling
+	========================================================================== */
+	
+
+.sticky {
+	.entry-title {
+		&:before {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			margin-right: .53em;
+			content: "\f08d";
+		}
+	}
+}
+
+.entry {
+
+	.wp-post-image {
+	}
+
+	.entry-header {
+
+		h1 {
+		}
+
+		.posted-on,
+		.byline {
+		}
+	}
+
+	.entry-meta {
+		a {
+
+			&:hover {
+			}
+		}
+	}
+}
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+.single, .group-blog {
+	.byline {
+		display: inline;
+	}
+}
+.page-links {
+	clear: both;
+}
+
+.cat-links,
+.tags-links,
+.comments-link,
+.edit-link {
+	display: block;
+	margin-bottom: 1em;
+
+	&:before {
+		content: "\f114";
+		font-family: "FontAwesome";
+		margin-right: .53em;
+		display: inline-block;
+		width: 1em;
+	}
+}
+
+.tags-links {
+	&:before {
+		content: "\f02b";
+	}
+}
+
+.comments-link {
+	&:before {
+		content: "\f0e5";
+	}
+}
+
+.edit-link {
+	&:before {
+		content: "\f040";
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hentry.type-post {
+
+		.entry-meta {
+		}
+
+		.entry-content {
+		}
+	}
+}
