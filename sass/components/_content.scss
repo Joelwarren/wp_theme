@@ -36,15 +36,26 @@
 		}
 	}
 }
+
+.entry.post {
+	background: #fff;
+	padding: $padding-large-vertical * 3;
+	margin-bottom: $padding-large-vertical * 3;
+	.entry-title,
+	.entry-header { margin-top: 0; }
+}
+
 .byline,
 .updated:not(.published) {
 	display: none;
 }
+
 .single, .group-blog {
 	.byline {
 		display: inline;
 	}
 }
+
 .page-links {
 	clear: both;
 }

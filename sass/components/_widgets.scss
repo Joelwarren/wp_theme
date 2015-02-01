@@ -3,7 +3,6 @@
  */
 
 .widget {
-	margin: 0 0 3.631em;
 
 	select {
 		max-width: 100%;
@@ -16,7 +15,6 @@
 	h1 {
 		font-size: 1em;
 		letter-spacing: 0;
-		border-bottom: 3px solid $color_body;
 		padding: 0 0 1em;
 		margin-bottom: 1em;
 		font-weight: 700;
@@ -42,17 +40,6 @@
 				color: #fff;
 			}
 		}
-	}
-}
-
-.header-widget-region {
-	margin-bottom: 4.236em;
-	@include clearfix;
-
-	.widget {
-		margin: 0;
-		padding: 1em 0;
-		font-size: .857em;
 	}
 }
 
@@ -94,30 +81,12 @@
 
 		li {
 			list-style: none;
-			margin-bottom: .618em;
 
 			&:before {
 				font-family: "FontAwesome";
 				margin-right: .53em;
 				display: inline-block;
-				opacity: 0.25;
 			}
-		}
-
-		.sub-menu {
-			margin-top: .618em;
-			margin-left: 1.618em;
-		}
-	}
-}
-
-.widget-area,
-.footer-widgets {
-	#wp-calendar {
-		th,
-		td {
-			padding: .236em;
-			text-align: center;
 		}
 	}
 }
@@ -132,7 +101,6 @@
 		}
 
 		ul.children {
-			margin: .618em 0 0 1.387em;
 		}
 	}
 }
@@ -195,24 +163,16 @@
 
 .widget-area {
 	.widget {
-		font-size: .857em;
 
-		h1.widget-title {
-			font-size: 1.387em;
+		.widget-title {
 		}
 
 		a {
-			color: $color_body;
-			font-weight: 400;
-			opacity: 0.75;
 
 			&:hover {
-				color: $color_links;
-				opacity: 1;
 			}
 
 			&.button {
-				opacity: 1;
 			}
 		}
 	}

@@ -27,7 +27,7 @@
 	<div id="page" class="site-container">
 	
 		<header id="masthead" role="banner" class="site-header">
-			<nav class="navbar navbar-default" role="navigation">
+			<nav class="navbar navbar-inverse" role="navigation">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">

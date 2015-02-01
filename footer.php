@@ -31,11 +31,11 @@
 			<div class="site-meta">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-md-6">
-							<span class="copyright"><?php echo _theme_copyright_year(); ?></span> - <a href="<?php echo get_permalink(2); ?>">Privacy policy</a>
+						<div class="col-md-6 copyright">
+							<?php echo _theme_copyright_year(); ?></span> - <a href="<?php echo get_permalink(2); ?>">Privacy policy</a>
 						</div><!-- .col -->
-						<div class="col-xs-12 col-md-6">
-							<span class="credit">Website by <a href="http://wiild.com.au" target="_blank">Wiild Interactive</a></span>
+						<div class="col-md-6 credit">
+							Website by <a href="http://wiild.com.au" target="_blank">Wiild Interactive</a>
 						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .container -->

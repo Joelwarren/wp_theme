@@ -1,4 +1,8 @@
 /*	:: Site footer
 	========================================================================== */
 	
-.site-footer {}
+.site-footer {
+	padding: $padding-large-vertical 0;
+	border-top: 1px solid $gray-lighter;
+	.credit { text-align: right; }
+}
