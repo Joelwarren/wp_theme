@@ -12,7 +12,7 @@
 		<article id="<?php echo get_post_type(); ?>-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
 			<header class="page-header entry-header">
-				<h1 itemprop="headline" class="page-title entry-title"><?php the_title(); ?></h1>
+				<h1 itemprop="headline" class="entry-title"><?php the_title(); ?></h1>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="entry-meta">
@@ -41,7 +41,7 @@
 
 		<article id="<?php echo get_post_type(); ?>-<?php the_ID(); ?>" <?php post_class('excerpt'); ?>>
 			
-			<header class="entry-header">
+			<header class="page-header entry-header">
 				<h2 itemprop="headline" class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 				<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="entry-meta">

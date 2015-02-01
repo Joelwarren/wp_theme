@@ -77,7 +77,7 @@ function _theme_numeric_posts_nav() {
 
 	//* Previous Post Link
 	if ( get_previous_posts_link() )
-		printf( '<li class="pagination-previous">%s</li>' . "\n", get_previous_posts_link( apply_filters( '_theme_prev_link_text', '&#x000AB;' . __( 'Previous Page', '_theme' ) ) ) );
+		printf( '<li class="pagination-previous">%s</li>' . "\n", get_previous_posts_link( apply_filters( '_theme_prev_link_text', '&#x000AB;' . __( ' Previous Page', '_theme' ) ) ) );
 
 	//* Link to first page, plus ellipses if necessary
 	if ( ! in_array( 1, $links ) ) {
@@ -111,7 +111,7 @@ function _theme_numeric_posts_nav() {
 
 	//* Next Post Link
 	if ( get_next_posts_link() )
-		printf( '<li class="pagination-next">%s</li>' . "\n", get_next_posts_link( apply_filters( '_theme_next_link_text', __( 'Next Page', '_theme' ) . '&#x000BB;' ) ) );
+		printf( '<li class="pagination-next">%s</li>' . "\n", get_next_posts_link( apply_filters( '_theme_next_link_text', __( 'Next Page ', '_theme' ) . '&#x000BB;' ) ) );
 
 	echo '</ul></div>' . "\n";
 

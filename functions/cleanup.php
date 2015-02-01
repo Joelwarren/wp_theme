@@ -26,6 +26,11 @@ function _theme_head_cleanup() {
 add_action('init', '_theme_head_cleanup');
 
 /**
+* Remove the inline gallery styling
+*/
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+/**
 * Remove the WordPress version from RSS feeds
 */
 add_filter('the_generator', '__return_false');

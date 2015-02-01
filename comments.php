@@ -28,6 +28,7 @@ if ( post_password_required() )
 						'style'       => 'ol',
 						'short_ping'  => true,
 						'avatar_size' => 48,
+						'callback'    => '_theme_comment'
 					) );
 				echo '</ol>';
 			}

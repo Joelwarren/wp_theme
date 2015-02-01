@@ -3,14 +3,6 @@
 	
 
 .sticky {
-	.entry-title {
-		&:before {
-			font-family: "FontAwesome";
-			font-weight: 400;
-			margin-right: .53em;
-			content: "\f08d";
-		}
-	}
 }
 
 .entry {
@@ -37,12 +29,15 @@
 	}
 }
 
+body.search .entry,
 .entry.post {
 	background: #fff;
 	padding: $padding-large-vertical * 3;
 	margin-bottom: $padding-large-vertical * 3;
+	.page-title,
 	.entry-title,
-	.entry-header { margin-top: 0; }
+	.page-header { margin-top: 0; }
+	.page-header { margin-bottom: 20px; }
 }
 
 .byline,

@@ -28,6 +28,42 @@
 .comment-list {
 	list-style: none;
 	margin-left: 0;
+	padding: 0;
+	
+	> .comment {
+		background: #fff;
+		margin-bottom: 10px;
+		border: 1px solid #e1e2e3;
+		article {
+			padding: 12px;
+		}
+		> .children {
+			background: #f6f7f8;
+			border-top: 1px solid #e1e2e3;
+			article { padding: 6px 12px; }
+			.comment {
+				background: none;
+			}
+		}
+	}
+	
+	.children {
+		padding: 6px 0;
+		margin: 0;
+		list-style: none;
+		font-size: 12px;
+		p { display: inline; }
+		.comment-meta {
+			.comment-author { margin-left: 45px; }
+			.author-name { display: inline; margin-right: 4px; }
+			.avatar { margin-bottom: 0; }
+		}
+		.comment-actions {
+			margin: 2px 0 0 45px;
+			opacity: 0.6;
+			font-size: 11px;
+		}
+	}
 
 	.comment-body {
 	}
@@ -36,52 +72,32 @@
 	}
 
 	.comment-meta {
+		overflow: hidden;
 		.avatar {
 			margin-bottom: 1em;
-			max-width: 32px;
+			max-width: 40px;
 			height: auto;
-		}
-
-		a.comment-date {
-			opacity: 0.8;
-
-			&:hover {
-			}
-		}
-
-		cite {
-			font-style: normal;
-			clear: both;
-			display: block;
-		}
-	}
-
-	.bypostauthor {
-		cite {
-			&:after {
-				font-family: "FontAwesome";
-				font-weight: 400;
-				margin-left: .53em;
-				content: "\f097";
-			}
-		}
-	}
-
-	.reply {
-
-		.comment-edit-link {
-		}
-
-		a {
 			float: left;
-
-			&:hover {
-			}
+		}
+		
+		.comment-author {
+			margin-left: 50px;
+		}
+		
+		.author-name { font-weight: bold; display: block; }
+		.time {
+			font-size: 12px;
+			color: $gray;
 		}
 	}
 
-	.children {
-		list-style: none;
+	.comment-actions {
+		font-size: 12px;
+		margin-top: 20px;
+		> a {
+			&:after { content: '-'; margin: 0 0 0 8px; }
+			&:last-child:after { content: ''; }
+		}
 	}
 }
 
@@ -103,96 +119,5 @@
 	.form-submit,
 	form {
 		margin-bottom: 0;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.comment-list {
-
-		.comment {
-			clear: both;
-		}
-
-		.comment-meta {
-
-			.avatar {
-			}
-		}
-
-		.comment-content {
-		}
-
-		.comment-content,
-		#respond {
-		}
-
-		#respond {
-			float: right;
-			.comment-form-author,
-			.comment-form-email,
-			.comment-form-url {
-				width: 100%;
-				margin-right: 0;
-			}
-		}
-
-		.reply {
-			clear: both;
-		}
-
-		ol.children {
-			list-style: none;
-
-			.comment-meta {
-			}
-
-			.comment-content,
-			#respond {
-			}
-
-			ol.children {
-
-				.comment-meta {
-				}
-
-				.comment-content,
-				#respond {
-				}
-
-				ol.children {
-
-					.comment-meta {
-					}
-
-					.comment-content,
-					#respond {
-					}
-
-					ol.children {
-
-						.comment-meta {
-						}
-
-						.comment-content,
-						#respond {
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#respond {
-		.comment-form-author,
-		.comment-form-email,
-		.comment-form-url {
-		}
-
-		.comment-form-url {
-		}
-
-		.comment-form-comment {
-			clear: both;
-		}
 	}
 }
