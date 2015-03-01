@@ -1,0 +1,56 @@
+div.wpcf7-response-output,
+.mc4wp-alert,
+.alert {
+	padding: 10px;
+	margin-bottom: 0;
+	border: 1px solid transparent;
+	border-radius: 5px;
+
+	> p,
+	> ul {
+		margin-bottom: 0;
+	}
+	> p + p {
+		margin-top: 5px;
+	}
+}
+
+input.wpcf7-not-valid {
+	border-color: $state-danger-border;
+}
+span.wpcf7-not-valid-tip {
+	color: $state-danger-text;
+	font-size: 12px;
+	padding: 5px;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.mc4wp-success,
+.wpcf7-mail-sent-ok,
+.alert-success {
+	color: $state-success-text;
+	border-color: $state-success-border;
+	background: $state-success-bg;
+}
+.alert-info {
+	color: $state-info-text;
+	border-color: $state-info-border;
+	background: $state-info-bg;
+}
+.mc4wp-already_subscribed-message,
+.wpcf7-validation-errors,
+.alert-warning {
+	color: $state-warning-text;
+	border-color: $state-warning-border;
+	background: $state-warning-bg;
+}
+.mc4wp-error,
+.wpcf7-mail-sent-ng,
+.alert-danger {
+	color: $state-danger-text;
+	border-color: $state-danger-border;
+	background: $state-danger-bg;
+}

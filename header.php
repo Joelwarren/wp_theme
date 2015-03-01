@@ -7,6 +7,8 @@
  * @package _theme
  * @version 1.0
  */
+global $body_class;
+ 
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -22,7 +24,7 @@
 	
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( $body_class ); ?>>
 
 	<div id="page" class="site-container">
 	
@@ -42,17 +44,28 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="navbar">
 						<?php 
-							wp_nav_menu( 
-								array( 
-									'theme_location' 	=> 'primary', 
-									'container'         => false,
-									'container_class'   => false,
-									'depth'             => 2,
-									'menu_class'        => 'nav navbar-nav navbar-right',
-									'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-									'walker'            => new wp_bootstrap_navwalker()
-								) 
-							);
+							if( class_exists ('wp_bootstrap_navwalker') ) {
+								wp_nav_menu( 
+									array( 
+										'theme_location' 	=> 'primary', 
+										'container'         => false,
+										'container_class'   => false,
+										'depth'             => 2,
+										'menu_class'        => 'nav navbar-nav navbar-right',
+										'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+										'walker'            => new wp_bootstrap_navwalker()
+									) 
+								);
+							} else {
+								wp_nav_menu( 
+									array( 
+										'theme_location' 	=> 'primary', 
+										'container'         => false,
+										'container_class'   => false,
+										'menu_class'        => 'nav navbar-nav navbar-right',
+									) 
+								);
+							}
 						?>
 					</div><!-- .navbar-collapse -->
 				</div><!-- .container -->

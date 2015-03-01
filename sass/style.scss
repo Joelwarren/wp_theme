@@ -17,6 +17,8 @@
 	font-style: normal;
 }
 
+.fa { font-family: 'FontAwesome'; }
+
 // structure files
 @import "compass";
 
@@ -33,6 +35,7 @@
 @import "components/content";
 @import "components/media";
 @import "components/widgets";
+@import "components/alerts";
 
 // Plugins
 @import "plugins/magnific-popup";

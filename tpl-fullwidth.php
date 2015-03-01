@@ -9,6 +9,7 @@
 /*
  Template Name: Full Width
 */
+$body_class = 'page-wide';
  
 get_header(); ?>
 

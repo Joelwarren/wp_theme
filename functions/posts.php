@@ -120,14 +120,14 @@ function _theme_numeric_posts_nav() {
 add_action( '_theme_entry_content', '_theme_do_post_content', 10 );
 
 function _theme_do_post_content() {
-	if ( is_search() ) : ?>
-		<div itemprop="text" class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-	<?php else : ?>
+	if ( is_single() || is_singular() ) : ?>
 		<div itemprop="text" class="entry-content">
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
+	<?php else : ?>
+		<div itemprop="text" class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 	<?php endif;
 }
 

@@ -13,6 +13,8 @@
 			<h1 itemprop="headline" class="page-title"><?php the_title(); ?></h1>
 		</header><!-- .page-header -->
 
-		<?php do_action( '_theme_entry_content' ); ?>
+		<div itemprop="text" class="entry-content">
+			<?php the_content(); ?>
+		</div><!-- .entry-content -->
 		
 	</article><!-- #<?php echo get_post_type(); ?>-<?php the_ID(); ?> -->
