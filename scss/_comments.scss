@@ -1,0 +1,157 @@
+
+/*	:: Comments
+	========================================================================== */
+
+.comments-area {
+	padding-top: 40px;
+}
+
+.comments-title,
+.comment-reply-title {
+}
+
+.comments-title {
+	color: #f27341;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 42px;
+	text-transform: uppercase;
+}
+
+.comment-notes,
+.logged-in-as {
+	color: #555;
+}
+
+.comment-awaiting-moderation {
+	display: block;
+	@extend .alert;
+	padding: 4px 8px;
+	margin: 0;
+	@extend .alert-warning;
+}
+
+.comment-list {
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+	> .comment {
+		background: #fff;
+		padding-left: 82px;
+		margin-bottom: 60px;
+		.avatar {
+			margin-left: -82px;
+		}
+	}
+	
+	.children {
+		list-style: none;
+		margin-left: 0;
+		padding: 0;
+		margin-top: 36px;
+		.comment {
+			padding-left: 64px;
+			.avatar {
+				margin-left: -64px;
+			}
+		}
+	}
+
+	.comment-body {
+		color: #62686b;
+		font-size: 15px;
+		p { margin-bottom: 0; }
+		@media (max-width: $screen-xs-max) {
+			font-size: 13px;
+		}
+	}
+
+	.comment-content {
+	}
+
+	.comment-meta {
+		margin-bottom: 4px;
+		.avatar {
+			margin-bottom: 1em;
+			max-width: 72px;
+			height: auto;
+			float: left;
+			border-radius: 50%;
+		}
+		
+		.author-name { 
+			font-weight: 600; 
+			display: inline-block;
+			font-size: 15px;
+			margin-right: 24px;
+		}
+		.time {
+			font-size: 13px;
+			display: inline-block;
+			color: #acb4b8;
+		}
+	}
+
+	.comment-actions {
+		font-size: 11px;
+		margin-top: 6px;
+		color: #acb4b8;
+		text-transform: uppercase;
+		> a {
+			color: #acb4b8;
+			&:after { content: '-'; margin: 0 0 0 8px; }
+			&:last-child:after { content: ''; }
+		}
+	}
+}
+
+.comment-list .bypostauthor .comment-meta {
+	.avatar {
+		border: 3px solid #64949D;
+		box-sizing: content-box;
+	}
+	.author-name {
+		color: #64949D;
+		&:after {
+			content: '(Post author)';
+			font-weight: normal;
+			margin-left: 8px;
+			font-size: 12px;
+			display: inline-block;
+			color: $text-color;
+		}
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-reply-title {
+	color: #f27341;
+	font-size: 20px;
+}
+
+#respond {
+	clear: both;
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		input {
+			width: 100%;
+		}
+	}
+
+	.form-submit,
+	form {
+		margin-bottom: 0;
+	}
+	
+	.form-submit {
+		text-align: right;
+		margin-bottom: 20px;
+	}
+}

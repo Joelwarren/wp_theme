@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 				tasks: ['jshint', 'uglify:dev']
 			},
 			sass: {
-				files: ['sass/{,*/}*.{scss,sass}'],
+				files: ['scss/{,*/}*.{scss,sass}'],
 				tasks: ['sass:dev']
 			},
 			php: {
@@ -50,18 +50,18 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'js/build/plugins.min.js': [
-						'js/plugins/bootstrap/transition.js',
-						'js/plugins/bootstrap/alert.js',
-						'js/plugins/bootstrap/button.js',
-						'js/plugins/bootstrap/carousel.js',
-						'js/plugins/bootstrap/collapse.js',
-						'js/plugins/bootstrap/dropdown.js',
-						'js/plugins/bootstrap/modal.js',
-						'js/plugins/bootstrap/tooltip.js',
-						'js/plugins/bootstrap/popover.js',
-						'js/plugins/bootstrap/scrollspy.js',
-						'js/plugins/bootstrap/tab.js',
-						'js/plugins/bootstrap/affix.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
 						'js/plugins/*.js'
 					],
 					'js/build/scripts.min.js': [
@@ -76,18 +76,18 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'js/build/plugins.min.js': [
-						'js/plugins/bootstrap/transition.js',
-						'js/plugins/bootstrap/alert.js',
-						'js/plugins/bootstrap/button.js',
-						'js/plugins/bootstrap/carousel.js',
-						'js/plugins/bootstrap/collapse.js',
-						'js/plugins/bootstrap/dropdown.js',
-						'js/plugins/bootstrap/modal.js',
-						'js/plugins/bootstrap/tooltip.js',
-						'js/plugins/bootstrap/popover.js',
-						'js/plugins/bootstrap/scrollspy.js',
-						'js/plugins/bootstrap/tab.js',
-						'js/plugins/bootstrap/affix.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+						'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
 						'js/plugins/*.js'
 					],
 					'js/build/scripts.min.js': [
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 					lineNumbers: true
 				},
 				files: {
-					'style.css' : 'sass/style.scss'
+					'style.css' : 'scss/style.scss'
 				}
 			},
 			dist: {
@@ -116,8 +116,8 @@ module.exports = function(grunt) {
 					lineNumbers: false
 				},
 				files: {
-					'style.css' : 'sass/style.scss',
-					'editor-style.css' : 'sass/editor-style.scss'
+					'style.css' : 'scss/style.scss',
+					'editor-style.css' : 'scss/editor-style.scss'
 				}
 			}
 		}

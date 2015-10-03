@@ -18,9 +18,12 @@ get_header(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'start' ); ?>
 	
-		<?php get_template_part( 'includes/loop', 'default' ); ?>
+		<main class="content-area" role="main">
+			<?php get_template_part( 'includes/loop', 'default' ); ?>
+		</main><!-- /.main -->
+		
+		<?php get_sidebar(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'end' ); ?>
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -3,7 +3,7 @@
  * The page content end wrapper for woocommerce
  *
  * @package _theme
- * @version 1.0
+ * @version 1.6.4
  */
 ?>
 

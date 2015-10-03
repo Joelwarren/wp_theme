@@ -27,7 +27,7 @@ if ( post_password_required() )
 					wp_list_comments( array(
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'avatar_size' => 48,
+						'avatar_size' => 72,
 						'callback'    => '_theme_comment'
 					) );
 				echo '</ol>';
@@ -44,27 +44,32 @@ if ( post_password_required() )
 <?php
 	$custom_comment_form = array( 
 		'fields' => apply_filters( 'comment_form_default_fields', array(
-		    'author' => '<div class="name-field">
-		    			 <input type="text" id="author" name="author" placeholder="' . __('Name *','_theme') . '" value="' . esc_attr( $commenter['comment_author'] ) . '" />
+		    'author' => '<div class="row"><div class="form-group col-sm-6 name-field">
+						<label for="author">Your Name</label>
+		    			 <input class="form-control" type="text" id="author" name="author" value="' . esc_attr( $commenter['comment_author'] ) . '" />
 		    			 </div>',
-		    'email'  => '<div class="email-field">
-		    			 <input name="email" type="text" id="email" placeholder="' . __('Email *','_theme') . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" />
-		    			 </div>',
-		    'url'    => '<div class="website-field">
-		    			 <input name="url" type="text" id="url" placeholder="' . __('Website','_theme') . '" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" />
-		    			 </div>') 
+		    'email'  => '<div class="form-group col-sm-6 email-field">
+						 <label for="email">Your Email Address</label>
+		    			 <input class="form-control" name="email" type="text" id="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" />
+		    			 </div></div>',
+		    'url'    => '') 
 		),
-		'comment_field' => '<div class="message-field">
-							<textarea name="comment" placeholder="' . __('Enter your comment here...','_theme') . '" id="comment" aria-required="true"></textarea>
+		'comment_field' => '<div class="message-field form-group">
+							<label for="email">Your Comment</label>
+							<textarea class="form-control" name="comment" id="comment" aria-required="true" rows="5"></textarea>
 							</div>',
 		'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a> <a href="%3$s">Log out?</a>','_theme' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) ) ) . '</p>',
 		'cancel_reply_link' => __( 'Cancel' , '_theme' ),
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
-		'label_submit' => __( 'Submit' , '_theme' )
+		'title_reply' => 'leave a comment',
+		'label_submit' => __( 'Post Comment' , '_theme' ),
+		'class_submit' => 'btn btn-default'
 	);
 ?>
-<div class="comment-form-wrapper">
-	<h3>Would you like to share your thoughts?</h3>
-	<?php comment_form($custom_comment_form); ?>
-</div><!-- .comment-form-wrapper -->
+<div class="row col-sm-10 col-sm-offset-1">
+	<div class="comment-form-wrapper">
+		<?php comment_form($custom_comment_form); ?>
+	</div><!-- .comment-form-wrapper -->
+</div><!-- .row -->
+

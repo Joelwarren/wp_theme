@@ -10,6 +10,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'start' ); ?>
 
+		<main class="content-area" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_type() ); ?>
@@ -21,8 +22,10 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
+		</main><!-- /.main -->
+		
+		<?php get_sidebar(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'end' ); ?>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -23,6 +23,9 @@ global $body_class;
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
 	<?php wp_head(); ?>
+	<!--[if lt IE 9]>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body <?php body_class( $body_class ); ?>>
 
@@ -73,5 +76,3 @@ global $body_class;
 		</header><!-- .site-header -->
 		
 		<div id="content" class="site-content">
-			<div class="container">
-				<div class="row">

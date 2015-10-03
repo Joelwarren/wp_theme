@@ -7,5 +7,6 @@
  */
 ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+	</div><!-- .row -->
+</div><!-- .container -->

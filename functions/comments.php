@@ -37,12 +37,12 @@ if ( ! function_exists( '_theme_comment' ) ) :
 				
 					<footer class="comment-meta">
 
-						<?php echo get_avatar( $comment, 40 ); ?>
+						<?php echo get_avatar( $comment, 64 ); ?>
 						<div class="comment-author vcard">
 							<span class="author-name"><?php echo get_comment_author_link(); ?></span>
 							<span class="time">
 								<time pubdate datetime="<?php echo get_comment_time( 'c' ); ?>">
-									<?php echo get_comment_date(); ?>
+									<?php echo get_comment_date('F n, Y g:i a'); ?>
 								</time>
 							</span>
 						</div><!-- .comment-author .vcard -->
@@ -61,25 +61,28 @@ if ( ! function_exists( '_theme_comment' ) ) :
 				
 				<?php } else { ?>
 			
-					<div class="comment-meta">
+					<footer class="comment-meta">
 
-						<?php echo get_avatar( $comment, 34 ); ?>
+						<?php echo get_avatar( $comment, 48 ); ?>
 						<div class="comment-author vcard">
 							<span class="author-name"><?php echo get_comment_author_link(); ?></span>
-							<?php comment_text(); ?>
-						</div><!-- .comment-author .vcard -->
-
-						<div class="comment-actions">
 							<span class="time">
 								<time pubdate datetime="<?php echo get_comment_time( 'c' ); ?>">
-									<?php echo get_comment_date(); ?>
+									<?php echo get_comment_date('F n, Y g:i a'); ?>
 								</time>
 							</span>
-							
+						</div><!-- .comment-author .vcard -->
+
+					</footer>
+
+					<div class="comment-body">
+						
+						<?php comment_text(); ?>
+						
+						<div class="comment-actions">
 							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 							<?php edit_comment_link( __( 'Edit' ), '&nbsp;&nbsp;', '' ); ?>
 						</div><!-- .comment-actions -->
-
 					</div>
 					
 				<?php } ?>

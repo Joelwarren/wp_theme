@@ -10,6 +10,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'start' ); ?>
 
+		<main class="content-area" role="main">
 			<header class="page-header">
 				<h1 class="page-title">Error: 404 - Page not found</h1>
 			</header><!-- .page-header -->
@@ -27,8 +28,10 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
+		</main><!-- /.main -->
+			
+		<?php get_sidebar(); ?>
 
 	<?php get_template_part( 'includes/wrapper', 'end' ); ?>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
